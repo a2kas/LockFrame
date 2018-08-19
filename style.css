@@ -1,0 +1,367 @@
+html, body {
+   
+}
+
+html {
+    overflow-y: scroll;
+}
+body{
+margin: 0 auto;
+width: 800px;
+height: 500px;
+border: 1px solid white;
+}
+
+td {
+color: #808080;
+}
+form {
+color: #808080;
+}
+
+input{
+color: #808080;
+padding-left: 5px;
+}
+
+header{
+position: absolute;
+width: 800px;
+height: 150px;
+background-image:url('img/header.png');
+}
+
+header form#login_form{
+position: absolute;
+top: 5%;
+left: 68%;
+width: 245px;
+padding-left: 5px;
+background: white;
+
+
+}
+
+header form#login_form a{
+color: #EB7948;
+font-size: medium;
+text-decoration: underline;
+}
+
+header form#login_form input#username_login{
+    width: 150px;
+}
+
+header form#login_form input#password_login{
+width: 150px;
+
+}
+
+header a{
+color: white;
+text-decoration:none;
+font-family: "Times New Roman",Georgia,Serif;
+font-size: large;
+}
+
+nav{
+position: absolute;
+top: 82%;
+left: 5.0%;
+color: white;
+}
+
+
+#lock_form{
+margin-top: 25%;
+margin-left: 23%;
+width: 420px;
+}
+
+
+#lock_form input#link_input{
+width: 400px;
+height: 20px;
+color: #808080;
+padding-left: 5px;
+
+}
+#lock_form button#lock_submit{
+width: 100px;
+height: 25px;
+
+}
+#lock_form div#lock_error{
+color: #808080;
+
+}
+
+table#logged {
+position: absolute;
+left: 75%;
+top: 6%;
+color: #808080;
+width: 180px;
+height: 80px;
+
+background-color: #EDEDE3 ;
+
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+table#logged td{
+font-size: medium;
+}
+table#logged td#logged_as{
+padding-left: 8px;
+padding-top: 4px;
+}
+
+table#logged a{
+color: #EB7948;
+font-size: medium;
+text-decoration: underline;
+}
+
+td#avatar{
+padding-left: 7px;
+padding-top: 6px;
+width: 98px;
+
+}
+
+/* Register form */
+form#register_form{
+margin-top: 20%;
+margin-left: 25%;
+width: 500px;
+
+}
+
+form#register_form input{
+width: 170px;
+}
+
+form#register_form input#years{
+width: 35px;
+}
+
+div#username_error{
+color: #FF5E5E;
+font-weight: bolder;
+}
+
+div#password_error{
+color: #FF5E5E;
+font-weight: bolder;
+}
+
+div#remind_error{
+color: #FF5E5E;
+font-weight: bolder;
+}
+
+div#email_error{
+color: #FF5E5E;
+font-weight: bolder;
+}
+
+div#social_lock{
+margin-top: 25%;
+margin-left: 23%;
+width: 420px;
+color: #808080;
+
+}
+
+div#password_locker{
+margin-top: 25%;
+margin-left: 23%;
+width: 420px;
+color: #808080;
+
+}
+
+div#password_locker input{
+width: 350px;
+}
+
+div#bannerlock{
+margin-top: 25%;
+margin-left: 30%;
+width: 420px;
+color: #808080;
+}
+
+div#errormsg{
+color: #FF5E5E;
+font-weight: bolder;
+}
+
+div#login_error{
+color: #FF5E5E;
+font-weight: bolder;
+}
+
+div#registration_success{
+padding-top: 15%;
+width: 450px;
+color: #AFAF93;
+font-size: x-large;
+text-align: center;
+}
+
+table#profile{
+margin-top: 20%;
+margin-left: 25%;
+width: 400px;
+
+}
+
+table#profile td#avatar{
+
+width: 100px;
+
+}
+table#profile td#avatar_notice{
+position: absolute;
+width: 278px;
+height: 100px;
+}
+
+table#profile div#success_upload{
+position: absolute;
+color: green;
+font-weight: bolder;
+
+}
+
+table#profile div#unsuccess_upload{
+position: absolute;
+top: 60%;
+color: #FF5E5E;
+font-weight: bolder;
+
+}
+
+form#forgot_password{
+margin-top: 20%;
+margin-left: 25%;
+width: 400px;
+
+}
+
+#success{
+    font-weight: bolder;
+    color: green;
+}
+
+#error{
+    font-weight: bolder;
+    color: #FF5E5E;
+}
+
+#lock_error{
+    color: #FF5E5E !important;
+    font-weight: bolder;
+
+}
+
+#locked_links_list h2{
+    color:  #808080;
+
+}
+
+#locked_links_list{
+    margin-top: 180px;
+    margin-left: 40px;
+
+}
+
+#locked_links_list table{
+    width:  700px;
+    margin-top: 5px;
+
+}
+
+#locked_links_list table th{
+    background: #EDEDE3;
+    color: #EB7948;
+
+}
+#locked_links_list table th#delete{
+    width: 50px;
+
+}
+#locked_links_list table th#edit{
+    width: 50px;
+
+}
+#locked_links_list table th#date{
+    width: 115px;
+
+}
+#locked_links_list table th#type{
+    width: 80px;
+
+}
+#locked_links_list table th#link{
+    width: 100px;
+
+}
+
+table#list a{
+    color: #EB7948;
+	font-size: medium;
+	text-decoration: underline;
+}
+
+div.locking_link{
+    word-wrap: break-word;
+    width: 420px;
+}
+
+footer{
+margin-top: 37%;
+margin-left: 30%;
+color: #808080;
+
+}
+.iframe{
+    width:  300px;
+    height:  300px;
+}
+
+table input#link {
+    width:  300px;
+}
+
+input#redirect_link{
+    width: 320px;
+}
+
+input#wait_time{
+    width: 30px;
+}
+
+select#lock_type {
+    margin-bottom:  10px;
+}
+
+span#view_it {
+    color: grey;
+    font-size: 16px;
+}
+#faq{
+	color: #808080;
+	margin-top: 23%;
+	margin-left: 5%;
+}
+div#code_error{
+	color: #FF5E5E;
+	font-weight: bolder;
+}
+
+

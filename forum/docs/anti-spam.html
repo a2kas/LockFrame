@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!--
+	Copyright (C) 2003-2012 UseBB Team
+	http://www.usebb.net
+	
+	$Id$
+	
+	This file is part of UseBB.
+	
+	UseBB is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
+	
+	UseBB is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+	
+	You should have received a copy of the GNU General Public License
+	along with UseBB; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+-->
+<title>UseBB 1 Spam Protection</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div id="wrapper">
+
+	<h1>Spam Protection</h1>
+	<div id="content">
+		<ul>
+			<li><a href="#spam-ip">Known spammers' IP addresses</a></li>
+			<li><a href="#spam-email">Known spammers' email addresses</a></li>
+			<li><a href="#random-questions">Custom anti-spam questions</a></li>
+			<li><a href="#remove-account">Removing spam accounts and posts</a></li>
+			<li><a href="#hinder-spam">Hindering (profile) spam</a></li>
+			<li><a href="#hide-profile-spam">Hiding profile spam</a></li>
+			<li><a href="#clean-profile-spam">Mass cleaning up profile spam accounts</a></li>
+			<li><a href="#recommendations"><strong>Recommended settings</strong></a></li>
+		</ul>	
+
+		<h2 id="spam-ip">Known spammers' IP addresses</h2>
+
+		<p>Databases such as <a href="http://www.stopforumspam.com/">Stop Forum Spam</a> keep a list of known spammers, their IP addresses, user names and email addresses. UseBB can use some of this data to automatically check and block forum access for these spammers.</p>
+
+		<p>IP addresses in the Stop Forum Spam database can be blocked using "DNSBL bans" (available since 1.0 RC1, May 2006). This is generally fast and without query limit.</p>
+
+		<ul>
+			<li>In the ACP, enter General Configuration and click Security.</li>
+			<li>Tick "Enable IP address banning" and "Enable DNSBL powered banning".</li>
+			<li>Save the form.</li>
+			<li>Enter the DNSBL Bans pane.</li>
+			<li>In the server list, add <code>dnsbl.tornevall.org</code>. Other settings can remain as-is.</li>
+			<li>Save the form.</li>
+		</ul>
+
+		<p>With every attempt to register or post, the IP address will be checked and eventually blocked.</p>
+
+		<h2 id="spam-email">Known spammers' email addresses</h2>
+
+		<p>Email addresses from the Stop Forum Spam database can be used as well, but this can not be done using DNSBL bans. Instead, since UseBB 1.0.13 it is possible to use Stop Forum Spam's API to check the email address upon registration or profile changes.</p>
+
+		<ul>
+			<li>In the ACP, enter General Configuration and click Anti-spam.</li>
+			<li>Tick "Stop Forum Spam: check email addresses".</li>
+			<li>Eventually, change the "minimum frequency" and "maximum last seen" settings.</li>
+			<li>Tick "Stop Forum Spam: save blocks in forum's ban table" to save the blocked addresses in the forum's bans.</li>
+			<li>Save the form.</li>
+		</ul>
+
+		<h2 id="random-questions">Custom anti-spam questions</h2>
+
+		<p>Custom anti-spam questions can be used to somewhat block automatic bots from the forum, given that the answers to the questions can not be easily calculated or derived, and the questions are changed regularly.</p>
+
+		<ul>
+			<li>In the ACP, enter General Configuration and click Anti-spam.</li>
+			<li>Change the setting "Anti-spam question mode" to "Randomly chosen custom question".</li>
+			<li>Enter questions in the form of <code>question|answer</code> in the field "Custom anti-spam questions".</li>
+			<li>Save the form.</li>
+		</ul>
+
+		<p>Please note that this does not block human spammers, or bots that have been updated with the correct answers.</p>
+
+		<h2 id="remove-account">Removing spam accounts and posts</h2>
+
+		<p>It is easy to remove all traces of a spam account.</p>
+
+		<ul>
+			<li>Enter the account's profile page and click the Delete link (when logged in as administrator).</li>
+			<li>Tick "Permanently delete the user's posts".</li>
+			<li>Optionally choose to also ban the given email address and last used IP address (only if IP banning is enabled).</li>
+			<li>If a Stop Forum Spam API key is set*, you can choose to submit the user information to the database.</li>
+			<li>Click Delete.</li>
+		</ul>
+
+		<p>* To set an API key, register and request one at <a href="http://www.stopforumspam.com/">stopforumspam.com</a>, enter the ACP at General Configuration &raquo; Anti-spam and enter the key in the field "Stop Forum Spam: API key".</p>
+
+		<h2 id="hinder-spam">Hindering (profile) spam</h2>
+
+		<p>You can hinder spam by using the "potential spammer" status and avoiding the forum to render URLs in the spammer's profile and/or signature. Spamming will be useless.</p>
+
+		<ul>
+			<li>In the ACP, enter General Configuration and click Anti-spam.</li>
+			<li>Tick "Potential spammer: disable profile links" and/or "Potential spammer: disable post links".</li>
+			<li>Set a number of posts in the field "Potential spammer: maximum post count". You can leave this at 0 to only manually approve accounts.</li>
+			<li>Save the form.</li>
+		</ul>
+
+		<p>When a user registers or activates, the account will have the status of a potential spammer. The restrictions enabled above will be in effect until the special status is lost, either when the post count is exceeded or when the account was edited manually by the administrator.</p>
+
+		<h2 id="hide-profile-spam">Hiding profile spam</h2>
+
+		<p>Profile spam are links added to the profile's website field or signature. When these are invisible to guests, the spam attempt has basically failed.</p>
+
+		<ul>
+			<li>In the ACP, enter General Configuration and click User rights.</li>
+			<li>Untick "Guests can view member profiles".</li>
+			<li>Save the form.</li>
+		</ul>
+
+		<h2 id="clean-profile-spam">Mass cleaning up profile spam accounts</h2>
+
+		<p>You can prune all profile spam accounts using member pruning.</p>
+
+		<ul>
+			<li>In the ACP, enter Prune Members.</li>
+			<li>Select "Profile spam accounts" and enter a number of days in the field below.</li>
+			<li>You can see a preview using the "Preview Members" button.</li>
+			<li>Tick "I understand this action is irreversible" and click "Start Pruning".</li>
+		</ul>
+
+		<p>Selected accounts are those with URLs added to the signature but with a post count of zero. Please be advised to choose a number of days big enough to avoid deleting accounts registered very recently.</p>
+
+		<h2 id="recommendations">Recommended settings</h2>
+
+		<p>Forums that are not publicly accessible, or can not be posted in by guests and have disabled public registrations, do not require any spam protection.</p>
+
+		<p>For other forums it would be advised to <a href="#spam-ip">enable DNSBL bans</a> in order to check IP addresses, <a href="#spam-email">enable Stop Forum Spam</a> email address checking and <a href="#hinder-spam">disable displaying URLs in profiles</a> of new members.</p>
+
+		<p>It is also encouraged to <a href="#remove-account">obtain a Stop Forum Spam API key</a> so that eventual spam accounts can be reported upon deletion.</p>
+	</div>
+
+</div>
+
+<p id="copyright">&copy; <a href="http://www.usebb.net">UseBB Project</a></p>
+</body>
+</html>

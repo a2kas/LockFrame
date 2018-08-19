@@ -1,0 +1,8 @@
+[10-Aug-2016 06:38:22 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home2/adska/public_html/lockframe/forum/sources/page_head.php on line 216
+[19-Aug-2016 10:11:43 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting '(' in /home2/adska/public_html/lockframe/forum/sources/session.php on line 172
+[22-Aug-2016 10:02:55 UTC] PHP Fatal error:  Call to undefined function pr() in /home2/adska/public_html/lockframe/forum/sources/session.php on line 630
+[22-Aug-2016 11:37:47 UTC] PHP Fatal error:  Class 'session' not found in /home2/adska/public_html/lockframe/forum/sources/common.php on line 321
+[24-Aug-2016 00:37:18 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home2/adska/public_html/lockframe/forum/profile.php on line 108
+[24-Aug-2016 00:37:20 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home2/adska/public_html/lockframe/forum/profile.php on line 108
+[24-Aug-2016 17:48:20 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home2/adska/public_html/lockframe/forum/sources/functions.php on line 1863
+[24-Aug-2016 17:48:43 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home2/adska/public_html/lockframe/forum/sources/functions.php on line 212

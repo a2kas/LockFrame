@@ -1,0 +1,37 @@
+Developers (with GitHub username)
+
+	* Dietrich Moerman (dietrichm)
+		Project founder, developer
+
+3rd party contributors
+
+	* Tadashi "ELF" Jokagi
+		Multibyte support and email handling patches
+
+	* Jeremy "Jemo" Hixon
+		Forum/topic icons
+
+3rd party portions
+
+	* DokuWiki development team
+		Javascript insert_tags() function (GNU GPL v2)
+
+	* phpBB Group
+		URL and e-mail regular expressions (GNU GPL v2)
+
+	* twilop at Zend.com article
+		checkdnsrr() replacement for Windows (public domain)
+
+	* aiwebs.co.nz
+		Smiley graphics (GNU GPL v2)
+
+	* stefanor at Drupal.org
+		HTML named entities to code table (GNU GPL v2)
+	
+	* CSS3 PIE developers
+		IE 8 CSS3 styling attributes support (GNU GPL v2)
+
+	Any changes to 3rd party code can be tracked at
+	https://github.com/usebb/UseBB/tree/v1.0.
+
+Should anyone be missing from this list, please email to contact@usebb.net.

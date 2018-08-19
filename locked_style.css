@@ -1,0 +1,65 @@
+iframe.locked_content{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: red;
+    border: 0;
+    
+}
+
+div.content_lock_bg{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity:0.95;
+    z-index:  1999999999;
+    
+}
+
+div.unlock_panel {
+    position: relative;
+    margin:  150px auto;
+    width: 320px;
+    height: 250px;
+    background:  #fff;
+    opacity: 1 !important;
+    z-index:  2000000000;
+}
+
+.fb-like {
+    
+}
+div.unlock_panel p {
+    font-size: 18px;
+    margin-left:  10px;
+    padding-top:  20px;
+}
+
+div.unlock_buttons {
+    margin-left: 40%;
+}
+
+div.locked_by {
+    height:  50px;
+    margin-top:  5px;
+    margin-left:  35px;
+}
+
+div.locked_by span{
+    font-family:'Times New Roman';
+    font-size: 14px;
+    margin-top:  11px;
+    position:  absolute;
+}
+
+div.locked_by img{
+    margin-left:  110px;
+    position:  absolute;
+    border: none;
+}
+

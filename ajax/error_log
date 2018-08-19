@@ -1,0 +1,19 @@
+[18-Jun-2016 00:26:26 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/adska/public_html/lockframe.com/ajax/social_ajax.php on line 47
+[18-Jun-2016 00:32:40 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/adska/public_html/lockframe.com/ajax/social_ajax.php on line 47
+[18-Jun-2016 00:36:18 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/adska/public_html/lockframe.com/ajax/social_ajax.php on line 47
+[18-Jun-2016 00:39:48 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/adska/public_html/lockframe.com/ajax/social_ajax.php on line 47
+[18-Jun-2016 00:40:30 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/adska/public_html/lockframe.com/ajax/social_ajax.php on line 47
+[18-Jun-2016 00:41:52 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home2/adska/public_html/lockframe.com/ajax/social_ajax.php on line 51
+[23-Jun-2016 02:16:38 America/Chicago] PHP Parse error:  syntax error, unexpected 'MYSQL_ASSOC' (T_STRING) in /home2/adska/public_html/lockframe.com/ajax/pass_ajax.php on line 10
+[23-Jun-2016 02:21:43 America/Chicago] PHP Parse error:  syntax error, unexpected 'MYSQL_ASSOC' (T_STRING) in /home2/adska/public_html/lockframe.com/ajax/pass_ajax.php on line 11
+[23-Jun-2016 02:23:01 America/Chicago] PHP Parse error:  syntax error, unexpected 'MYSQL_ASSOC' (T_STRING) in /home2/adska/public_html/lockframe.com/ajax/pass_ajax.php on line 10
+[23-Jun-2016 02:43:45 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in /home2/adska/public_html/lockframe.com/ajax/pass_ajax.php on line 10
+[23-Jun-2016 02:44:53 America/Chicago] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, string given in /home2/adska/public_html/lockframe.com/ajax/pass_ajax.php on line 10
+[02-Aug-2016 10:48:44 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'Request error for API call: Problem with the SSL CA cert (path? access rights?)' in /home2/adska/public_html/lockframe/ajax/codebird.php:2062
+Stack trace:
+#0 /home2/adska/public_html/lockframe/ajax/codebird.php(2014): Codebird\Codebird->_callApiCurl('POST', 'oauth/request_t...', 'oauth/request_t...', Array, false, false)
+#1 /home2/adska/public_html/lockframe/ajax/codebird.php(836): Codebird\Codebird->_callApi('POST', 'oauth/request_t...', 'oauth/request_t...', Array, false, false)
+#2 /home2/adska/public_html/lockframe/ajax/login_with_twitter.php(13): Codebird\Codebird->__call('oauth_requestTo...', Array)
+#3 /home2/adska/public_html/lockframe/ajax/login_with_twitter.php(13): Codebird\Codebird->oauth_requestToken(Array)
+#4 {main}
+  thrown in /home2/adska/public_html/lockframe/ajax/codebird.php on line 2062
